@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: YuGo;
+  src: url("../font/yugothib.ttf")
+}
+
+body {
+  font-family: YuGo, YuGothic, Meiryo;
+}
+
+/* MENUS */
+
+#shops, #jeans {
+  z-index: 20;
+}
+
+#pocket, #layer{
+  width: 50%;
+}
+
+/* OPTIONS BUTTON */
+#pocket button, #layer button, #pattern button, #color button {
+  margin-top: 0.3em;
+}
+
+button:disabled{
+  background-color: #bbb!important;
+  color: #eee!important;
+}
+
+/* COLORS */
+.ajino {
+  color: #eee !important;
+  background-color: #0072bc !important
+}
+
+.okayama {
+  color: #eee !important;
+  background-color: #0db14b !important
+}
+
+.aoyama {
+  color: #eee !important;
+  background-color: #58595b !important
+}
+
+.koenji {
+  color: #eee !important;
+  background-color: #903f98 !important
+}
+
+.hiroshima {
+  color: #eee !important;
+  background-color: #E94A4C !important
+}
+
+.osaka {
+  color: #111 !important;
+  background-color: #fff200 !important
+}
+
+.kyoto {
+  color: #eee !important;
+  background-color: #684927 !important
+}
+
+.white {
+  color: #ffffff !important;
+  background-color: #ffffff !important;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #111;
+  -moz-box-shadow: inset 0px 0px 0px 1px #111;
+  box-shadow: inset 0px 0px 0px 1px #111
+}
+
+.red {
+  color: #E60013 !important;
+  background-color: #E60013 !important
+}
+
+.pink {
+  color: #E23688 !important;
+  background-color: #E23688 !important
+}
+
+.pearl {
+  color: #F1AEC3 !important;
+  background-color: #F1AEC3 !important
+}
+
+.gold {
+  color: #ECE95D !important;
+  background-color: #ECE95D !important
+}
+
+.font-ajino {
+  color: #0072bc !important
+}
+
+.font-okayama {
+  color: #0db14b !important
+}
+
+.font-aoyama {
+  color: #58595b !important
+}
+
+.font-koenji {
+  color: #903f98 !important
+}
+
+.font-hiroshima {
+  color: #E94A4C !important
+}
+
+.font-osaka {
+  color: #fff200 !important;
+  text-shadow: 0px 0px 1px #333;
+}
+
+.font-kyoto {
+  color: #684927 !important
+}
+
+.font-black {
+  color: #000000 !important
+}
+
+/* IMAGES */
+#lP, #rP {
+  position: relative;
+}
+
+#lP img, #rP img {
+  height: auto;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5%;
+}
+
+#lP img {
+  left: 0;
+}
+
+#rP img {
+  left: 50%;
+}
+
+.rawPocket {
+  z-index: -1;
+}
+
+.dotan {
+  z-index: 0;
+  display: none;
+}
+
+#rP1, #lP1 {
+  z-index: 2;
+}
+
+#rP2, #lP2 {
+  z-index: 4;
+}
+
+#rP3, #lP3 {
+  z-index: 6;
+}
+
+#rP4, #lP4 {
+  z-index: 8;
+}
+
+.dotanShadow {
+  z-index: 10;
+  display: none;
+}
