@@ -161,7 +161,8 @@ $(document)
       .click(changeImage);
 
     $(btn3)
-      .click(buttonDisabled);
+      .click(buttonDisabled)
+      .click(shutsujinDisabled);
 
     $("#color button")
       .click(buttonColor);
@@ -174,6 +175,7 @@ $(document)
       .click(buttonColor)
       .click(imgShop)
       .click(buttonDisabled)
+      .click(shutsujinDisabled)
       .click(setShopCookie);
 
     $("#jeans button, #reset")
