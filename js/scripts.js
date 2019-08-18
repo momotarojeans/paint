@@ -138,14 +138,13 @@ var setShopCookie = function(){
 var getShopCookie = function(){
   var shopCookie = Cookies.get('shop');;
 
-  $("#shops button.font-"+shopCookie).trigger('click');
+  $("button.font-"+shopCookie).trigger(click);
 
 };
 
 $(document)
   .ready(getShopCookie)
   .ready(buttonDisabled)
-  .ready(shutsujinDisabled)
   .ready(function() {
     var btn = "#shops button, #jeans button, #pocket button, #layer button, #pattern button, #color button";
     var btn1 = "#pocket button, #layer button, #pattern button";
