@@ -138,9 +138,7 @@ var setShopCookie = function(){
 var getShopCookie = function(){
   var shopCookie = Cookies.get('shop');;
 
-  if ($("#shops button").val() == shopCookie){
-    $(this).addClass("active")
-  }
+  $("#shops button."+shopCookie).toggleClass("active");
 
 };
 
