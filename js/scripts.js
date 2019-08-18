@@ -143,6 +143,10 @@ var getShopCookie = function(){
 };
 
 $(document)
+  .ready(getShopCookie)
+  .ready(shopColor)
+  .ready(buttonDisabled)
+  .ready(shutsujinDisabled)
   .ready(function() {
     var btn = "#shops button, #jeans button, #pocket button, #layer button, #pattern button, #color button";
     var btn1 = "#pocket button, #layer button, #pattern button";
@@ -184,6 +188,4 @@ $(document)
       .click(shutsujinDisabled)
       .click(buttonDisabled);
 
-  })
-  .ready(buttonDisabled)
-  .ready(getShopCookie);
+  });
