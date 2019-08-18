@@ -138,13 +138,12 @@ var setShopCookie = function(){
 var getShopCookie = function(){
   var shopCookie = Cookies.get('shop');;
 
-  $("#shops button."+shopCookie).toggleClass("active");
+  $("#shops button.font-"+shopCookie).trigger('click');
 
 };
 
 $(document)
   .ready(getShopCookie)
-  .ready(shopColor)
   .ready(buttonDisabled)
   .ready(shutsujinDisabled)
   .ready(function() {
