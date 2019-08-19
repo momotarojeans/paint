@@ -138,7 +138,9 @@ var setShopCookie = function(){
 var getShopCookie = function(){
   var shopCookie = Cookies.get('shop');
 
-  $("button.font-"+shopCookie).trigger("click touchstart");
+  $("button.font-"+shopCookie).toggleClass("active");
+
+  shopColor();
 
 };
 
@@ -171,7 +173,6 @@ $(document)
 
     $("#shops button")
       .click(shopColor)
-      .touchstart(shopColor)
       .click(buttonColor)
       .click(imgShop)
       .click(buttonDisabled)
