@@ -7,6 +7,7 @@
 
 body {
   font-family: YuGo, YuGothic, Meiryo;
+  height:100%;
 }
 
 /* MENUS */
@@ -17,6 +18,10 @@ body {
 
 #pocket, #layer{
   width: 50%;
+}
+
+.ajinolimited{
+  display: none;
 }
 
 /* OPTIONS BUTTON */
@@ -50,11 +55,6 @@ button:disabled{
   background-color: #903f98 !important
 }
 
-.hiroshima {
-  color: #eee !important;
-  background-color: #E94A4C !important
-}
-
 .osaka {
   color: #111 !important;
   background-color: #fff200 !important
@@ -63,6 +63,16 @@ button:disabled{
 .kyoto {
   color: #eee !important;
   background-color: #684927 !important
+}
+
+.web {
+  color: #eee !important;
+  background-color: #FA8E43 !important;
+}
+
+.momoshop{
+  color: #111 !important;
+  background-color: #AAF0D1 !important
 }
 
 .white {
@@ -93,6 +103,11 @@ button:disabled{
   background-color: #ECE95D !important
 }
 
+.black {
+  color: #000000 !important;
+  background-color: #000000 !important
+}
+
 .font-ajino {
   color: #0072bc !important
 }
@@ -109,10 +124,6 @@ button:disabled{
   color: #903f98 !important
 }
 
-.font-hiroshima {
-  color: #E94A4C !important
-}
-
 .font-osaka {
   color: #fff200 !important;
   text-shadow: 0px 0px 1px #333;
@@ -122,58 +133,80 @@ button:disabled{
   color: #684927 !important
 }
 
+.font-web {
+  color: #FA8E43 !important;
+}
+
+.font-momoshop {
+  color: #AAF0D1 !important;
+  text-shadow: 0px 0px 1px #333;
+}
+
 .font-black {
   color: #000000 !important
 }
 
 /* IMAGES */
-#lP, #rP {
-  position: relative;
+#rP, #lP{
+  padding: 16px
 }
 
-#lP img, #rP img {
-  height: auto;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 5%;
+.svgundefined{
+  fill: rgba(255,255,255,0.0);
 }
 
-#lP img {
-  left: 0;
+.svgwhite {
+  fill: #fff;
 }
 
-#rP img {
-  left: 50%;
+.svgred {
+  fill: #EB3228;
 }
 
-.rawPocket {
-  z-index: -1;
+.svgpink {
+  fill: #F26284;
 }
 
-.dotan {
-  z-index: 0;
-  display: none;
+.svgpearl {
+  fill: #F597A5;
 }
 
-#rP1, #lP1 {
-  z-index: 2;
+.svggold {
+  fill: #E4DE31;
 }
 
-#rP2, #lP2 {
-  z-index: 4;
+.svgblack {
+  fill: #000;
 }
 
-#rP3, #lP3 {
-  z-index: 6;
+.svgajino {
+  fill: #0072BC;
 }
 
-#rP4, #lP4 {
-  z-index: 8;
+.svgokayama {
+  fill: #0DB14B;
 }
 
-.dotanShadow {
-  z-index: 10;
-  display: none;
+.svgaoyama {
+  fill: #58595B;
+}
+
+.svgkoenji {
+  fill: #903F98;
+}
+
+.svgosaka {
+  fill: #FFF200;
+}
+
+.svgkyoto {
+  fill: #684927;
+}
+
+.svgweb {
+  fill: #FA8E43;
+}
+
+.svgmomoshop {
+  fill: #AAF0D1;
 }
