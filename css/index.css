@@ -72,7 +72,7 @@ button:disabled{
 
 .momoshop{
   color: #111 !important;
-  background-color: #ccc !important
+  background-color: #DBD0BF !important
 }
 
 .white {
@@ -138,7 +138,7 @@ button:disabled{
 }
 
 .font-momoshop {
-  color: #ccc !important;
+  color: #DBD0BF !important;
   text-shadow: 0px 0px 1px #333;
 }
 
@@ -208,5 +208,5 @@ button:disabled{
 }
 
 .svgmomoshop {
-  fill: #ccc;
+  fill: #DBD0BF;
 }
