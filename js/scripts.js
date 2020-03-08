@@ -140,14 +140,16 @@ var svgChange = function() {
 
   $("#"+pocketActive+" .z"+layerActive).removeClass("z"+layerActive).hide();
 
-  if ($(":button[value=ichimatsu]").hasClass("active") && $(":button[class=ichim]").hasClass("active")){
+  if ($("#pattern :button[value=ichimatsu]").hasClass("active") && $("#color button.noic").hasClass("active")){
     $("#color button.active").removeClass("active");
     $(":button[value=black]").addClass("active");
     $("#"+pocketActive+" ."+patternActive).addClass("z"+layerActive+" svgblack").show();
-  } else if (!$(":button[value=ichimatsu]").hasClass("active") && $("button.blk").hasClass("active")){
+    buttonColor();
+  } else if (!$("#pattern :button[value=ichimatsu]").hasClass("active") && $("button.blk").hasClass("active")){
     $("#color button.active").removeClass("active");
     $(":button[value=white]").addClass("active white");
     $("#"+pocketActive+" ."+patternActive).addClass("z"+layerActive+" svgwhite").show();
+    buttonColor();
   } else {
     $("#"+pocketActive+" ."+patternActive).addClass("z"+layerActive+" svg"+colorActive).show();
   };
@@ -259,6 +261,7 @@ var getShopCookie = function(){
 };
 
 $(document)
+  .ready(getShopCookie)
   .ready(button0Disabled)
   .ready(button1Disabled)
   .ready(function() {
@@ -296,5 +299,4 @@ $(document)
       .click(button1Disabled)
       .click(reset);
 
-    })
-  .ready(getShopCookie);
+    });
