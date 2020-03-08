@@ -99,7 +99,7 @@ var jeans = function() {
     $(".stitchdoutan").show();
     $("#rP, #lP").css("padding","48px");
   } else if (jeansActive == "ajinoup") {
-    $("#labelText").html("AJ-SK");
+    $("#labelText").html("味野上");
     $("#locksp").show();
     $("#locksp .lockspup").show().css("fill","#0072BC");
     $("#locksp .lockspdwn").show().css("fill","#fff");
@@ -107,7 +107,7 @@ var jeans = function() {
     $(".pocket").show().css("fill","#01060C");
     $("#rP, #lP").css("padding","16px");
   } else if (jeansActive == "ajinodwn") {
-    $("#labelText").html("AJ0205");
+    $("#labelText").html("味野下");
     $("#locksp").show();
     $("#locksp .lockspup").show().css("fill","#fff");
     $("#locksp .lockspdwn").show().css("fill","#0072BC");
