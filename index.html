@@ -15,9 +15,12 @@
 </head>
 
 <body>
-  <header class="w3-container w3-bar w3-black">
+
+  <header class="w3-bar w3-black">
+
     <span class="w3-bar-item w3-mobile w3-right w3-large"><b>MOMOTARO JEANS</b></span>
-    <div class="w3-dropdown-hover w3-margin-right w3-light-gray">
+
+    <div class="w3-dropdown-hover w3-margin-right w3-light-gray w3-mobile">
       <button id="shopText" class="w3-button w3-large">店舗</button>
       <div id="shops" class="w3-dropdown-content w3-bar-block w3-card-4 w3-large">
         <button class="w3-bar-item w3-button font-ajino" value="ajino">味野本店</button>
@@ -30,7 +33,8 @@
         <button class="w3-bar-item w3-button font-momoshop" value="momoshop">POPUP店</button>
       </div>
     </div>
-    <div class="w3-dropdown-hover w3-margin-right w3-light-gray">
+
+    <div class="w3-dropdown-hover w3-margin-right w3-light-gray w3-mobile">
       <button id="labelText" class="w3-button w3-large">出陣</button>
       <div id="jeans" class="w3-dropdown-content w3-bar-block w3-card-4 w3-large">
         <button class="w3-bar-item w3-button active" value="shutsujin">出陣</button>
@@ -46,12 +50,14 @@
         <button class="w3-bar-item w3-button ajinolimited" value="ajinodwn">AJ0205</button>
       </div>
     </div>
-    <!-- <button type="button" id="print" class="w3-bar-item w3-button w3-mobile w3-light-gray w3-large w3-margin-right">印刷</button> -->
-    <button type="button" class="w3-bar-item w3-button w3-mobile w3-light-gray w3-large w3-margin-right">メニュー閉じ</button>
+
     <button type="button" id="reset" class="w3-bar-item w3-button w3-mobile w3-light-gray w3-large w3-margin-right">取消</button>
+
+    <button type="button" id="print" class="w3-bar-item w3-button w3-mobile w3-light-gray w3-large w3-margin-right">印刷</button>
+
   </header>
 
-  <div class="w3-mobile w3-container w3-center w3-row">
+  <div class="w3-mobile w3-container w3-center w3-row pocketmenu">
     <div id="pocket" class="w3-left">
       <button type="button" class="w3-button w3-black w3-large" value="lP">左</button>
       <button type="button" class="w3-button w3-black w3-large" value="rP">右</button>
@@ -60,7 +66,6 @@
       <button type="button" class="w3-button w3-black w3-large" value="1" id="l1">1</button>
       <button type="button" class="w3-button w3-black w3-large" value="2">2</button>
       <button type="button" class="w3-button w3-black w3-large" value="3">3</button>
-      <button type="button" class="w3-button w3-black w3-large" value="4">4</button>
     </div>
   </div>
 
@@ -86,7 +91,7 @@
     <button type="button" id="shopColor" class="w3-button w3-black w3-large ic ichim" value="shopColor">限定</button>
   </div>
 
-  <div class="w3-mobile w3-row w3-container">
+  <div class="w3-mobile w3-row w3-container svgContainer">
     <div id="lP" class="w3-half">
       <svg xmlns="http://www.w3.org/2000/svg" id="paintsvg" width="100%" version="1.1" viewBox="0 0 102.5 101.22">
        <path class="pocket" d="m101.35 2.6641s3.636 43.854-6.703 82.125l-43.58 16.426-43.579-16.426c-10.357-37.808-6.705-82.125-6.705-82.125z" fill="#01060c"/>
@@ -155,6 +160,244 @@
        </g>
       </svg>
     </div>
+
   </div>
 
+  <div id="printForm">
+    <div class="w3-container fill-height">
+      <div id="title">
+        <a href="" id="getBack"><p>バックポケットペイント注文用紙</p></a>
+      </div>
+      <div id="head" class="w3-row">
+
+        <div class="column">
+
+          <div class="line">
+            <div class="w3-third">
+              <span>注文日</span>
+            </div>
+            <div class="w3-twothird">
+              <span class="date"></span>
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="w3-third">
+              <span>顧客番号</span>
+            </div>
+            <div class="w3-twothird">
+              <span>　　　－</span>
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="w3-third">
+              <span>お名前</span>
+            </div>
+            <div class="w3-twothird">
+              <span class="w3-large w3-right">様</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="column smallfont">
+
+          <div class="line">
+            <div class="w3-third">
+              <span>仕上がり予定日</span>
+            </div>
+            <div class="w3-twothird">
+              <span>　　　　　年　　月　　日</span>
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="w3-third">
+              <span>品番・サイズ</span>
+            </div>
+            <div class="w3-twothird">
+              <span class="w3-right">/　　　　W</span>
+            </div>
+          </div>
+
+          <div class="line">
+            <div class="w3-third">
+              <span>受注店・担当</span>
+            </div>
+            <div class="w3-twothird">
+              <span class="w3-left printFromShop"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="column">
+
+          <div class="line">
+            <div class="w3-third">
+              <span>ペイント数</span>
+            </div>
+            <div class="w3-twothird">
+              <span class="paintCounter"></span>
+            </div>
+          </div>
+
+          <div class="line" style="min-height: calc(200%  /3); border:2px solid black;">
+            <div class="w3-third">
+              <span>★お客様最終確認★</span>
+            </div>
+            <div class="w3-twothird">
+              <span></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div id="lPockets" class="w3-row">
+
+        <div class="pocketText">
+          <span>左ポケット</span>
+        </div>
+
+        <div class="w3-container w3-quarter zshow1">
+          <p>
+            <i class="gg-check-r"></i>
+            <span class="patternCode"></span><span style="float:right;">1番目</span>
+          </p>
+          <p>
+            <span>カラー：</span>
+            <span class="colorCode"></span>
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="paintsvg" version="1.1" viewBox="0 0 102.5 101.22">
+           <path class="pocket" d="m101.35 2.6641s3.636 43.854-6.703 82.125l-43.58 16.426-43.579-16.426c-10.357-37.808-6.705-82.125-6.705-82.125z" fill="#01060c"/>
+           <path class="stitchup" d="m0.85982 4.4401h100.8" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitchdwn" d="m0.46382 8.1041h101.19" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitch" d="m89.375 2.3661c8.866 50.386 0.141 78.162 0.141 78.162l-38.478 15.064-38.502-15.064s-8.901-28.338 0.416-79.697h-10.057l-0.155 1.964s-3.507 43.334 6.436 80.309l41.836 16.059 41.836-16.059c9.927-37.428 6.437-80.309 6.437-80.309l-0.693-2.529" fill="none" stroke="#d38027" stroke-dasharray="2.10100009, 0.78800004" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <g class="svgPrint1">
+           </g>
+          </svg>
+        </div>
+
+        <div class="w3-container w3-quarter zshow2">
+          <p>
+            <i class="gg-check-r"></i>
+            <span class="patternCode"></span><span style="float:right;">2番目</span>
+          </p>
+          <p>
+            <span>カラー：</span>
+            <span class="colorCode"></span>
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="paintsvg" version="1.1" viewBox="0 0 102.5 101.22">
+           <path class="pocket" d="m101.35 2.6641s3.636 43.854-6.703 82.125l-43.58 16.426-43.579-16.426c-10.357-37.808-6.705-82.125-6.705-82.125z" fill="#01060c"/>
+           <path class="stitchup" d="m0.85982 4.4401h100.8" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitchdwn" d="m0.46382 8.1041h101.19" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitch" d="m89.375 2.3661c8.866 50.386 0.141 78.162 0.141 78.162l-38.478 15.064-38.502-15.064s-8.901-28.338 0.416-79.697h-10.057l-0.155 1.964s-3.507 43.334 6.436 80.309l41.836 16.059 41.836-16.059c9.927-37.428 6.437-80.309 6.437-80.309l-0.693-2.529" fill="none" stroke="#d38027" stroke-dasharray="2.10100009, 0.78800004" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <g class="svgPrint2">
+           </g>
+          </svg>
+        </div>
+
+        <div class="w3-container w3-quarter zshow3">
+          <p>
+            <i class="gg-check-r"></i>
+            <span class="patternCode"></span><span style="float:right;">3番目</span>
+          </p>
+          <p>
+            <span>カラー：</span>
+            <span class="colorCode"></span>
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="paintsvg" version="1.1" viewBox="0 0 102.5 101.22">
+           <path class="pocket" d="m101.35 2.6641s3.636 43.854-6.703 82.125l-43.58 16.426-43.579-16.426c-10.357-37.808-6.705-82.125-6.705-82.125z" fill="#01060c"/>
+           <path class="stitchup" d="m0.85982 4.4401h100.8" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitchdwn" d="m0.46382 8.1041h101.19" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitch" d="m89.375 2.3661c8.866 50.386 0.141 78.162 0.141 78.162l-38.478 15.064-38.502-15.064s-8.901-28.338 0.416-79.697h-10.057l-0.155 1.964s-3.507 43.334 6.436 80.309l41.836 16.059 41.836-16.059c9.927-37.428 6.437-80.309 6.437-80.309l-0.693-2.529" fill="none" stroke="#d38027" stroke-dasharray="2.10100009, 0.78800004" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <g class="svgPrint3">
+           </g>
+          </svg>
+        </div>
+
+      </div>
+
+      <div id="rPockets" class="w3-row">
+
+        <div class="pocketText">
+          <span>右ポケット</span>
+        </div>
+
+        <div class="w3-container w3-quarter zshow1">
+          <p>
+            <i class="gg-check-r"></i>
+            <span class="patternCode"></span><span style="float:right;">1番目</span>
+          </p>
+          <p>
+            <span>カラー：</span>
+            <span class="colorCode"></span>
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="paintsvg" version="1.1" viewBox="0 0 102.5 101.22">
+           <path class="pocket" d="m101.35 2.6641s3.636 43.854-6.703 82.125l-43.58 16.426-43.579-16.426c-10.357-37.808-6.705-82.125-6.705-82.125z" fill="#01060c"/>
+           <path class="stitchup" d="m0.85982 4.4401h100.8" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitchdwn" d="m0.46382 8.1041h101.19" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitch" d="m89.375 2.3661c8.866 50.386 0.141 78.162 0.141 78.162l-38.478 15.064-38.502-15.064s-8.901-28.338 0.416-79.697h-10.057l-0.155 1.964s-3.507 43.334 6.436 80.309l41.836 16.059 41.836-16.059c9.927-37.428 6.437-80.309 6.437-80.309l-0.693-2.529" fill="none" stroke="#d38027" stroke-dasharray="2.10100009, 0.78800004" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <g class="svgPrint1">
+           </g>
+          </svg>
+        </div>
+
+        <div class="w3-container w3-quarter zshow2">
+          <p>
+            <i class="gg-check-r"></i>
+            <span class="patternCode"></span><span style="float:right;">2番目</span>
+          </p>
+          <p>
+            <span>カラー：</span>
+            <span class="colorCode"></span>
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="paintsvg" version="1.1" viewBox="0 0 102.5 101.22">
+           <path class="pocket" d="m101.35 2.6641s3.636 43.854-6.703 82.125l-43.58 16.426-43.579-16.426c-10.357-37.808-6.705-82.125-6.705-82.125z" fill="#01060c"/>
+           <path class="stitchup" d="m0.85982 4.4401h100.8" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitchdwn" d="m0.46382 8.1041h101.19" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitch" d="m89.375 2.3661c8.866 50.386 0.141 78.162 0.141 78.162l-38.478 15.064-38.502-15.064s-8.901-28.338 0.416-79.697h-10.057l-0.155 1.964s-3.507 43.334 6.436 80.309l41.836 16.059 41.836-16.059c9.927-37.428 6.437-80.309 6.437-80.309l-0.693-2.529" fill="none" stroke="#d38027" stroke-dasharray="2.10100009, 0.78800004" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <g class="svgPrint2">
+           </g>
+          </svg>
+        </div>
+
+        <div class="w3-container w3-quarter zshow3">
+          <p>
+            <i class="gg-check-r"></i>
+            <span class="patternCode"></span><span style="float:right;">3番目</span>
+          </p>
+          <p>
+            <span>カラー：</span>
+            <span class="colorCode"></span>
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="paintsvg" version="1.1" viewBox="0 0 102.5 101.22">
+           <path class="pocket" d="m101.35 2.6641s3.636 43.854-6.703 82.125l-43.58 16.426-43.579-16.426c-10.357-37.808-6.705-82.125-6.705-82.125z" fill="#01060c"/>
+           <path class="stitchup" d="m0.85982 4.4401h100.8" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitchdwn" d="m0.46382 8.1041h101.19" fill="none" stroke="#dbdf01" stroke-dasharray="2.626, 0.788" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <path class="stitch" d="m89.375 2.3661c8.866 50.386 0.141 78.162 0.141 78.162l-38.478 15.064-38.502-15.064s-8.901-28.338 0.416-79.697h-10.057l-0.155 1.964s-3.507 43.334 6.436 80.309l41.836 16.059 41.836-16.059c9.927-37.428 6.437-80.309 6.437-80.309l-0.693-2.529" fill="none" stroke="#d38027" stroke-dasharray="2.10100009, 0.78800004" stroke-linecap="round" stroke-linejoin="round" stroke-width=".525"/>
+           <g class="svgPrint3">
+           </g>
+          </svg>
+        </div>
+
+      </div>
+      <table id="table">
+        <tr class="tableText">
+          <th>工場</th>
+          <th>本社</th>
+          <th>営業</th>
+          <th style="display:flex;flex:1;align-items: center;justify-content: center;"><span>1番目</span> <span style="padding: 0 10px 0 6px;"><i class="gg-arrow-long-left"></i></span> <span>3番目</span> </th>
+        </tr>
+        <tr class="tableVoid">
+          <th></th>
+          <th></th>
+          <th></th>
+          <th style="display:flex;flex:1;align-items: center;justify-content: center;height:8mm;"><span>下</span> <span style="padding: 0 10px 0 6px;"><i class="gg-arrow-long-left"></i></span> <span>上</span> </th>
+        </tr>
+      </table>
+    </div>
+  </div>
 </body>
